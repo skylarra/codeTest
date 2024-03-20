@@ -54,11 +54,13 @@ nav {
     flex-direction: column;
     float: right;
     z-index: 1;
+    margin-top: 30px;
 }
 
 .navMenu {
     z-index: 1;
-
+    position: absolute;
+    right: 0;
 }
 
 .hidden {
@@ -78,7 +80,7 @@ a {
 }
 
 header {
-    width: 100%;
+    width: 50%;
     position: absolute;
     font-size: 2.9vw;
     margin: 10px;
@@ -87,8 +89,46 @@ header {
 }
 
 .line {
-    margin-top: 110px;
+    width: 50%;
+    margin-top: 140px;
+    margin-bottom: 10px;
+    transition: margin-top 0.6s ease-in;
 }
+
+.headerpic {
+    width: 45vw;
+    height: 25vh;
+    float: right;
+    margin-top: -180px;
+}
+
+.pic {
+    width: 30vw;
+    height: 25vh;
+    border: 1px red solid;
+    top: 0px; /* Start off-screen */
+    animation: slideInDown 2s forwards;
+}
+
+.socialsContainer {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.socials {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+.socials a {
+    font-size: 5vw;
+    margin: 10px 20px;
+}
+
 
 /* Define the slideIn animation */
 @keyframes slideInLeft {
@@ -96,14 +136,62 @@ header {
         transform: translateX(100%); /* Start off-screen */
     }
     to {
-        transform: translateX(5%); /* Move back to the initial position (on-screen) */
+        transform: translateX(-90%); /* Move back to the initial position (on-screen) */
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
     }
 }
 
 
 @media only screen and (min-width: 800px) {
     .line {
-        margin-top: 300px;
+        margin-top: 330px;
+        transition: margin-top 0.6s ease-in;
+    }
+
+    .socials {
+        width: 50%;
+    }
+
+    .socials a {
+        font-size: 3vw;
+        margin: 10px 20px;
+    }
+
+    .pic {
+        height: 46vh;
+    }
+
+    @keyframes slideInDown {
+        from {
+            transform: translateY(-100%);
+        }
+        to {
+            transform: translateY(-50%);
+        }
+    }
+
+    .hidden {
+        display: flex;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+        z-index: 1;
+        margin-top: 5px;
+        margin-right: 40vw;
+    }
+
+    #navMenu {
+        display: none;
     }
 
 }

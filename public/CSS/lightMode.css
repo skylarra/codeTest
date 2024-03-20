@@ -1,7 +1,30 @@
-button {
-    background-color: inherit;
+body {
+    background-color: #e7e7e7;
+    color: #3A3E41;
 }
 
-* {
-    color: #495a60;
+button {
+    background-color: inherit;
+    color: #495a69;
+}
+
+a {
+    color: #3A3E41;
+}
+
+.modeColor {
+    color: #495a69;
+}
+
+.socials {
+    background-color: #495a69;
+}
+
+.socials a {
+    color: #e7e7e7;
+}
+
+
+.line {
+    border-bottom: 2px #3A3E41 solid;
 }

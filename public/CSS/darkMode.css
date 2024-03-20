@@ -1,6 +1,6 @@
 body {
     background-color: #2a2a2a;
-    color: white;
+    color: #e7e7e7;
 }
 
 button {
@@ -9,9 +9,17 @@ button {
 }
 
 a {
-    color: #fff;
+    color: #e7e7e7;
 }
 
 .modeColor {
     color: #EAA369;
+}
+
+.socials {
+    background-color: #232323;
+}
+
+.line {
+    border-bottom: 2px #e7e7e7 solid;
 }
